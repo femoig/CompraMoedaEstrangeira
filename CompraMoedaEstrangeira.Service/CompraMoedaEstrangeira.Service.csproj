@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CompraMoedaEstrangeira.Data\CompraMoedaEstrangeira.Data.csproj" />
+    <ProjectReference Include="..\CompraMoedaEstrangeira.Domain\CompraMoedaEstrangeira.Domain.csproj" />
+    <ProjectReference Include="..\ExchangeRates\ExchangeRates.csproj" />
+  </ItemGroup>
+
+</Project>

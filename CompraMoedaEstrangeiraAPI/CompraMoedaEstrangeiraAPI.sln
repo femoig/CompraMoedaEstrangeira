@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompraMoedaEstrangeiraAPI", "CompraMoedaEstrangeiraAPI.csproj", "{CBF5BCB5-1BDC-472E-8927-E6EFA4545D01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompraMoedaEstrangeiraAPI", "CompraMoedaEstrangeiraAPI.csproj", "{CBF5BCB5-1BDC-472E-8927-E6EFA4545D01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{B198984D-212A-49C0-904F-2F18B5ED3672}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{F2ECFC8A-4DC2-4B25-93E7-9C76F3BD7368}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{AA490F78-48C2-46C4-BE24-FB1EC991D7B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{88A5E2F9-DEE2-4F7E-81EC-1F7C3207D699}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{9DB17478-225B-4EBB-A046-BC5F81A75A18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{58DE37F0-22CE-460B-8851-BF9FA13A66AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompraMoedaEstrangeira.Domain", "..\CompraMoedaEstrangeira.Domain\CompraMoedaEstrangeira.Domain.csproj", "{A19EFD44-085E-463E-9F0C-950D5242AAD9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompraMoedaEstrangeira.Service", "..\CompraMoedaEstrangeira.Service\CompraMoedaEstrangeira.Service.csproj", "{C6E802C9-D3A9-4BA3-A7F0-7E32B1FE64F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompraMoedaEstrangeira.Data", "..\CompraMoedaEstrangeira.Data\CompraMoedaEstrangeira.Data.csproj", "{771B82CD-DAE0-4A9A-AB37-41BBBDE49B57}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeRates", "..\ExchangeRates\ExchangeRates.csproj", "{556185A8-3602-4516-90BC-BB12840A7700}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BCF3B868-88C3-48FB-ADA7-F6116CCCDD26}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompraMoedaEstrangeira.Service.Testes", "..\CompraMoedaEstrangeira.Service.Testes\CompraMoedaEstrangeira.Service.Testes.csproj", "{6157A05C-3DE7-4997-B03D-4949F2A6D02B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +39,39 @@ Global
 		{CBF5BCB5-1BDC-472E-8927-E6EFA4545D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBF5BCB5-1BDC-472E-8927-E6EFA4545D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBF5BCB5-1BDC-472E-8927-E6EFA4545D01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A19EFD44-085E-463E-9F0C-950D5242AAD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A19EFD44-085E-463E-9F0C-950D5242AAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A19EFD44-085E-463E-9F0C-950D5242AAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A19EFD44-085E-463E-9F0C-950D5242AAD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6E802C9-D3A9-4BA3-A7F0-7E32B1FE64F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E802C9-D3A9-4BA3-A7F0-7E32B1FE64F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E802C9-D3A9-4BA3-A7F0-7E32B1FE64F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E802C9-D3A9-4BA3-A7F0-7E32B1FE64F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{771B82CD-DAE0-4A9A-AB37-41BBBDE49B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{771B82CD-DAE0-4A9A-AB37-41BBBDE49B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{771B82CD-DAE0-4A9A-AB37-41BBBDE49B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{771B82CD-DAE0-4A9A-AB37-41BBBDE49B57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{556185A8-3602-4516-90BC-BB12840A7700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{556185A8-3602-4516-90BC-BB12840A7700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{556185A8-3602-4516-90BC-BB12840A7700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{556185A8-3602-4516-90BC-BB12840A7700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6157A05C-3DE7-4997-B03D-4949F2A6D02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6157A05C-3DE7-4997-B03D-4949F2A6D02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6157A05C-3DE7-4997-B03D-4949F2A6D02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6157A05C-3DE7-4997-B03D-4949F2A6D02B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CBF5BCB5-1BDC-472E-8927-E6EFA4545D01} = {B198984D-212A-49C0-904F-2F18B5ED3672}
+		{9DB17478-225B-4EBB-A046-BC5F81A75A18} = {88A5E2F9-DEE2-4F7E-81EC-1F7C3207D699}
+		{58DE37F0-22CE-460B-8851-BF9FA13A66AB} = {88A5E2F9-DEE2-4F7E-81EC-1F7C3207D699}
+		{A19EFD44-085E-463E-9F0C-950D5242AAD9} = {F2ECFC8A-4DC2-4B25-93E7-9C76F3BD7368}
+		{C6E802C9-D3A9-4BA3-A7F0-7E32B1FE64F6} = {AA490F78-48C2-46C4-BE24-FB1EC991D7B1}
+		{771B82CD-DAE0-4A9A-AB37-41BBBDE49B57} = {9DB17478-225B-4EBB-A046-BC5F81A75A18}
+		{556185A8-3602-4516-90BC-BB12840A7700} = {58DE37F0-22CE-460B-8851-BF9FA13A66AB}
+		{6157A05C-3DE7-4997-B03D-4949F2A6D02B} = {BCF3B868-88C3-48FB-ADA7-F6116CCCDD26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D2A25AF-2C9D-4517-B8E8-3742060A1093}

@@ -1,0 +1,14 @@
+﻿using System;
+using System.Net.Http;
+
+namespace ExchangeRates
+{
+    public class FakeExchangeRate : IExchangeRate
+    {
+        Random random = new Random();
+        public decimal ConsultaTaxaConversao(string moedaLocal, string moedaDesejada)
+        {
+            return Convert.ToDecimal(random.Next(1, 7));
+        }
+    }
+}
