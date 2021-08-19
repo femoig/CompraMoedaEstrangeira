@@ -34,7 +34,7 @@ namespace CompraMoedaEstrangeiraAPI.Controllers
         [HttpGet]
         public ActionResult<CotacaoResponse> CotacaoMoeda(string moeda, decimal valor, int clienteID)
         {
-            if (ValidadorCalculadoraMoedaEstrangeira.CotacaoMoedaIsValid(moeda, valor, clienteID))
+            if (!ValidadorCalculadoraMoedaEstrangeira.CotacaoMoedaIsValid(moeda, valor, clienteID))
             {
                 return BadRequest("Os [moeda,valor,clienteID] campo são obrigatórios");
             }
@@ -54,7 +54,7 @@ namespace CompraMoedaEstrangeiraAPI.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult<ConsultaTaxaResponse> ConsultaTaxaPorCliente(int clienteID)
         {
-            if (ValidadorCalculadoraMoedaEstrangeira.ConsultaTaxaPorClienteIsValid(clienteID))
+            if (!ValidadorCalculadoraMoedaEstrangeira.ConsultaTaxaPorClienteIsValid(clienteID))
             {
                 return BadRequest("clienteID é obrigatório.");
             }
@@ -75,7 +75,7 @@ namespace CompraMoedaEstrangeiraAPI.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult<ConsultaTaxaResponse> ConsultaTaxaPorSegmento(string nomeSegmento)
         {
-            if (ValidadorCalculadoraMoedaEstrangeira.ConsultaTaxaPorSegmentoIsValid(nomeSegmento))
+            if (!ValidadorCalculadoraMoedaEstrangeira.ConsultaTaxaPorSegmentoIsValid(nomeSegmento))
             {
                 return BadRequest("Nome do segmento é obrigatório.");
             }            

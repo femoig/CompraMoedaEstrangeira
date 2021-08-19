@@ -9,6 +9,7 @@ namespace CompraMoedaEstrangeira.Data
     public class ClienteRepository : IClienteRepository
     {
         Dictionary<int, Cliente> keys;
+        Random random = new Random();
         public ClienteRepository()
         {
             AdicionandoClientesFake();
@@ -32,9 +33,8 @@ namespace CompraMoedaEstrangeira.Data
         private Cliente CriaClienteAleatorio()
         {
             Cliente cliente = default(Cliente);
-            Random random = new Random();
-            int randomNumber = random.Next(0, 2);
-
+            
+            int randomNumber = random.Next(2);
             keys.TryGetValue(randomNumber, out cliente);
             return cliente;
         }
