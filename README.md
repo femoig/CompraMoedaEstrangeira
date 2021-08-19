@@ -1,2 +1,7 @@
-# CompraMoedaEstrangeira
-Calcula valor cobrado para compra de moedas estrangeiras por segmento de cliente.
+
+# Compra Moeda Estrangeira
+
+Essa API tem como finalidade calcular a compra de moedas estrangeiras considerando
+os diversos tipos de clientes existentes.
+
+
