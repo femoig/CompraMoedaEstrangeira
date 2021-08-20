@@ -7,7 +7,7 @@
 * [Como baixar o projeto?](#como-baixar-o-projeto?)
 * [Onde encontro a documentação e como testo?](#documentação)
 * [Autenticação](#autenticação)
-* [Arquitetura básica](#arquitetura)
+* [Arquitetura básica](#arquitetura-básica)
 * [About Me - Links](#about-me)
  
 
