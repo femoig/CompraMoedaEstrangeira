@@ -8,7 +8,7 @@ namespace ExchangeRates
         Random random = new Random();
         public decimal ConsultaTaxaConversao(string moedaLocal, string moedaDesejada)
         {
-            return Convert.ToDecimal(random.Next(1, 7));
+            return Convert.ToDecimal(random.Next(2, 5));
         }
     }
 }

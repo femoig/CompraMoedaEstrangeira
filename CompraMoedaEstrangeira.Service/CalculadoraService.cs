@@ -35,11 +35,11 @@ namespace CompraMoedaEstrangeira.Service
 
                 var cliente = _clienteService.BuscaCliente(clienteID);
 
-                decimal valorTaxaCliente = _calculadoraTaxaSegmento.ConsultaTaxa(cliente);
+                decimal valorTaxaSegmento = _calculadoraTaxaSegmento.ConsultaTaxa(cliente);
                 decimal taxaDeConversao = ConsultaTaxaConversao(moeda);
-                decimal valorCotacao = CalculaCotacao(valorDesejado, valorTaxaCliente, taxaDeConversao);
+                decimal valorCotacao = CalculaCotacao(valorDesejado, valorTaxaSegmento, taxaDeConversao);
 
-                var cotacaoResponse = ParseCotacao(valorCotacao, cliente, moeda, valorDesejado, clienteID, valorTaxaCliente);
+                var cotacaoResponse = ParseCotacao(valorCotacao, cliente, moeda, valorDesejado, clienteID, valorTaxaSegmento, taxaDeConversao);
 
                 return cotacaoResponse;
             }
@@ -49,13 +49,13 @@ namespace CompraMoedaEstrangeira.Service
             }
         }
 
-        private static decimal CalculaCotacao(decimal valorDesejado, decimal valorTaxaCliente, decimal taxaDeConversao)
+        private static decimal CalculaCotacao(decimal valorDesejado, decimal valorTaxaSegmento, decimal taxaDeConversao)
         {
-            return (valorDesejado * taxaDeConversao) * (1 + valorTaxaCliente);
+            return (valorDesejado * taxaDeConversao) * (1 + valorTaxaSegmento);
         }
         
 
-        private CotacaoResponse ParseCotacao(decimal valorCotacao, Domain.Entities.Cliente cliente, string moeda, decimal valorDesejado, int clienteID, decimal valorTaxaSegmento)
+        private CotacaoResponse ParseCotacao(decimal valorCotacao, Domain.Entities.Cliente cliente, string moeda, decimal valorDesejado, int clienteID, decimal valorTaxaSegmento, decimal valorCambio)
         {
             return new CotacaoResponse { 
                 ValorCotacao = valorCotacao, 
@@ -63,6 +63,7 @@ namespace CompraMoedaEstrangeira.Service
                 MoedaDesejada = moeda.ToUpper(),
                 ValorDesejado = valorDesejado,
                 ValorTaxaSegmento = valorTaxaSegmento,
+                ValorCambio = valorCambio,
                 ClienteID = clienteID
             };
         }

@@ -16,6 +16,8 @@ namespace CompraMoedaEstrangeira.Domain.ResourceModel
 
         public decimal ValorTaxaSegmento { get; set; }
 
+        public decimal ValorCambio { get; set; }
+
         public string NomeSegmento { get; set; }
         public int ClienteID { get; set; }
 

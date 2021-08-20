@@ -36,7 +36,7 @@ namespace CompraMoedaEstrangeiraAPI.Controllers
         {
             if (!ValidadorCalculadoraMoedaEstrangeira.CotacaoMoedaIsValid(moeda, valor, clienteID))
             {
-                return BadRequest("Os [moeda,valor,clienteID] campo são obrigatórios");
+                return BadRequest("Os campos [moeda,valor,clienteID] são obrigatórios");
             }
 
             var cotacao = _calculadoraService.CalculaCotacao(moeda, valor, clienteID);
