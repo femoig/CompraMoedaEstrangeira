@@ -1,5 +1,4 @@
 ﻿using CompraMoedaEstrangeira.Domain.Entities;
-using System;
 
 namespace CompraMoedaEstrangeira.Data
 {

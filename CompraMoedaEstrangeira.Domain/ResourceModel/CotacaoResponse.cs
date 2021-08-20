@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CompraMoedaEstrangeira.Domain.ResourceModel
+﻿namespace CompraMoedaEstrangeira.Domain.ResourceModel
 {
     public class CotacaoResponse
     {
@@ -11,7 +7,7 @@ namespace CompraMoedaEstrangeira.Domain.ResourceModel
         public string MoedaOrigem { get { return "BRL"; } }
 
         public string MoedaDesejada { get; set; }
-                
+
         public decimal ValorDesejado { get; set; }
 
         public decimal ValorTaxaSegmento { get; set; }

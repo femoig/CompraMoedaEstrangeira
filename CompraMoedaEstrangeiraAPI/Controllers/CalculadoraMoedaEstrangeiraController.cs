@@ -3,11 +3,6 @@ using CompraMoedaEstrangeira.Service;
 using CompraMoedaEstrangeiraAPI.Validators;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CompraMoedaEstrangeiraAPI.Controllers
 {
@@ -15,7 +10,6 @@ namespace CompraMoedaEstrangeiraAPI.Controllers
     [Route("[controller]")]
     public class CalculadoraMoedaEstrangeiraController : ControllerBase
     {
-        private readonly IClienteService _clienteService;
         private readonly ICalculadoraService _calculadoraService;
 
         public CalculadoraMoedaEstrangeiraController(ICalculadoraService calculadoraService)
@@ -59,7 +53,7 @@ namespace CompraMoedaEstrangeiraAPI.Controllers
                 return BadRequest("clienteID é obrigatório.");
             }
 
-            var valorTaxa =_calculadoraService.ConsultaTaxa(clienteID);
+            var valorTaxa = _calculadoraService.ConsultaTaxa(clienteID);
 
             return valorTaxa;
         }
@@ -78,7 +72,7 @@ namespace CompraMoedaEstrangeiraAPI.Controllers
             if (!ValidadorCalculadoraMoedaEstrangeira.ConsultaTaxaPorSegmentoIsValid(nomeSegmento))
             {
                 return BadRequest("Nome do segmento é obrigatório.");
-            }            
+            }
 
             var valorTaxa = _calculadoraService.ConsultaTaxaPorSegmento(nomeSegmento);
 

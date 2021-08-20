@@ -2,8 +2,6 @@
 using CompraMoedaEstrangeira.Domain.Validators;
 using ExchangeRates;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CompraMoedaEstrangeira.Service
 {
@@ -16,7 +14,7 @@ namespace CompraMoedaEstrangeira.Service
         private readonly ICalculadoraTaxaSegmento _calculadoraTaxaSegmento;
 
         public CalculadoraService(
-            IClienteService clienteService, 
+            IClienteService clienteService,
             ISegmentoClienteService segmentoClienteService,
             IExchangeRate exchangeRate,
             ICalculadoraTaxaSegmento calculadoraTaxaSegmento)
@@ -53,12 +51,13 @@ namespace CompraMoedaEstrangeira.Service
         {
             return (valorDesejado * taxaDeConversao) * (1 + valorTaxaSegmento);
         }
-        
+
 
         private CotacaoResponse ParseCotacao(decimal valorCotacao, Domain.Entities.Cliente cliente, string moeda, decimal valorDesejado, int clienteID, decimal valorTaxaSegmento, decimal valorCambio)
         {
-            return new CotacaoResponse { 
-                ValorCotacao = valorCotacao, 
+            return new CotacaoResponse
+            {
+                ValorCotacao = valorCotacao,
                 NomeSegmento = cliente.NomeSegmento,
                 MoedaDesejada = moeda.ToUpper(),
                 ValorDesejado = valorDesejado,
@@ -85,7 +84,7 @@ namespace CompraMoedaEstrangeira.Service
 
         public ConsultaTaxaResponse ConsultaTaxaPorSegmento(string nomeSegmento)
         {
-            var valorTaxa = _segmentoClienteService.ConsultaTaxaPorSegmento(nomeSegmento); 
+            var valorTaxa = _segmentoClienteService.ConsultaTaxaPorSegmento(nomeSegmento);
             ConsultaTaxaResponse response = ParseConsultaTaxa(valorTaxa, nomeSegmento);
 
             return response;

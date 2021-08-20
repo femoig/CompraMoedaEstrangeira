@@ -1,10 +1,7 @@
 using CompraMoedaEstrangeira.Data;
-using CompraMoedaEstrangeira.Domain.Entities;
 using CompraMoedaEstrangeira.Domain.ResourceModel;
-using CompraMoedaEstrangeiraAPI.Controllers;
 using Moq;
 using NUnit.Framework;
-using System;
 using System.Collections.Generic;
 
 namespace CompraMoedaEstrangeira.Service.Testes
@@ -39,7 +36,7 @@ namespace CompraMoedaEstrangeira.Service.Testes
         public void AtualizaTaxaSegmento_ValorTaxaPositiva()
         {
             //arrange
-            SegmentoResponse segmentoResponse = new SegmentoResponse { NomeSegmento = "Private", Taxa=5m };
+            SegmentoResponse segmentoResponse = new SegmentoResponse { NomeSegmento = "Private", Taxa = 5m };
 
             //act
             mock.Setup(p => p.AtualizarTaxa("Private", 5m)).Returns(segmentoResponse);
@@ -50,7 +47,7 @@ namespace CompraMoedaEstrangeira.Service.Testes
             Assert.That(segmentoResponse.Taxa == 5m);
         }
 
-        [Test]        
+        [Test]
         public void AtualizaTaxaSegmento_ValorTaxaNegativa_NaoDevePermitir()
         {
             //arrange

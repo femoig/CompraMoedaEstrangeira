@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace CompraMoedaEstrangeiraAPI.Validators
+﻿namespace CompraMoedaEstrangeiraAPI.Validators
 {
     public static class ValidadorCalculadoraMoedaEstrangeira
     {

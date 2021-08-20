@@ -1,9 +1,7 @@
 ﻿using CompraMoedaEstrangeira.Data;
 using CompraMoedaEstrangeira.Domain.ResourceModel;
 using Service.Validators;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CompraMoedaEstrangeira.Service
 {

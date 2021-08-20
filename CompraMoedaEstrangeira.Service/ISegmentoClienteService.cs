@@ -1,7 +1,5 @@
 ﻿using CompraMoedaEstrangeira.Domain.ResourceModel;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CompraMoedaEstrangeira.Service
 {

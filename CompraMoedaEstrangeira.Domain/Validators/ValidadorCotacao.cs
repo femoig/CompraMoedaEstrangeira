@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CompraMoedaEstrangeira.Domain.Validators
 {
     public static class ValidadorCotacao
     {
-        public static void Valida(string moeda, decimal valorDesejado, int clienteID) 
+        public static void Valida(string moeda, decimal valorDesejado, int clienteID)
         {
             if (string.IsNullOrEmpty(moeda))
                 throw new ArgumentException("Moeda obrigatória. Exemplo de formato: USD");

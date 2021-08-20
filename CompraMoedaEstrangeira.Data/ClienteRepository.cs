@@ -1,7 +1,6 @@
 ﻿using CompraMoedaEstrangeira.Domain.Entities;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CompraMoedaEstrangeira.Data
 {
@@ -33,7 +32,7 @@ namespace CompraMoedaEstrangeira.Data
         private Cliente CriaClienteAleatorio()
         {
             Cliente cliente = default(Cliente);
-            
+
             int randomNumber = random.Next(2);
             keys.TryGetValue(randomNumber, out cliente);
             return cliente;

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CompraMoedaEstrangeira.Domain.ResourceModel
+﻿namespace CompraMoedaEstrangeira.Domain.ResourceModel
 {
     public class ConsultaTaxaResponse
     {
