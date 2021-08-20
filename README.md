@@ -2,13 +2,13 @@
 # Compra Moeda Estrangeira
 
 ## Table of contents
-* [O que essa API faz?](#O-que-essa-API-faz?)
+* [O que essa API faz?](#O-que-essa-api-faz?)
 * [Tecnologias](#tecnologias)
-* [Como baixar o projeto?](#Como baixar o projeto?)
-* [Onde encontro a documentação e como testo?](#tecnologias)
-* [Autenticação](#tecnologias)
-* [Arquitetura básica](#tecnologias)
-* [About Me - Links](#tecnologias)
+* [Como baixar o projeto?](#como-baixar-o-projeto?)
+* [Onde encontro a documentação e como testo?](#documentação)
+* [Autenticação](#autenticação)
+* [Arquitetura básica](#arquitetura)
+* [About Me - Links](#about-me)
  
 
 ## O que essa API faz?
@@ -31,7 +31,7 @@ Não implementada.
 ![alt text](https://github.com/femoig/CompraMoedaEstrangeira/blob/main/compra_moeda_estrangeira.png?raw=true)
 
 
-## 🔗 About Me - Links
+## About Me
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/femoig)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fernando-ignacio/)
 
