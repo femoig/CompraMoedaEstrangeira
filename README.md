@@ -2,9 +2,9 @@
 # Compra Moeda Estrangeira
 
 ## Table of contents
-* [O que essa API faz?](#O-que-essa-api-faz?)
+* [O que essa API faz?](#o-que-essa-api-faz)
 * [Tecnologias](#tecnologias)
-* [Como baixar o projeto?](#como-baixar-o-projeto?)
+* [Como baixar o projeto?](#como-baixar-o-projeto)
 * [Onde encontro a documentação e como testo?](#documentação)
 * [Autenticação](#autenticação)
 * [Arquitetura básica](#arquitetura-básica)
