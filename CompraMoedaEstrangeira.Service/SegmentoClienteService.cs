@@ -15,7 +15,7 @@ namespace CompraMoedaEstrangeira.Service
         }
         public SegmentoResponse AtualizarTaxa(string segmento, decimal valorTaxa)
         {
-            ValidadorAtualizarTaxa.Valida(valorTaxa);
+            ValidadorAtualizarTaxa.Valida(valorTaxa, segmento);
 
             return _segmentoRepository.AtualizarTaxa(segmento, valorTaxa);
         }

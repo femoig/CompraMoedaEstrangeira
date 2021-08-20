@@ -1,7 +1,10 @@
 ﻿using CompraMoedaEstrangeira.Domain.ResourceModel;
 using CompraMoedaEstrangeira.Service;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
+using System.Net;
+using System.Net.Http;
 
 namespace CompraMoedaEstrangeiraAPI.Controllers
 {

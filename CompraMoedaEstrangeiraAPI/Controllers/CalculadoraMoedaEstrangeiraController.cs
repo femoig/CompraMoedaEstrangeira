@@ -3,6 +3,7 @@ using CompraMoedaEstrangeira.Service;
 using CompraMoedaEstrangeiraAPI.Validators;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace CompraMoedaEstrangeiraAPI.Controllers
 {
@@ -30,7 +31,7 @@ namespace CompraMoedaEstrangeiraAPI.Controllers
         {
             if (!ValidadorCalculadoraMoedaEstrangeira.CotacaoMoedaIsValid(moeda, valor, clienteID))
             {
-                return BadRequest("Os campos [moeda,valor,clienteID] são obrigatórios");
+                throw new ArgumentException("Os campos [moeda,valor,clienteID] são obrigatórios");
             }
 
             var cotacao = _calculadoraService.CalculaCotacao(moeda, valor, clienteID);
@@ -50,7 +51,7 @@ namespace CompraMoedaEstrangeiraAPI.Controllers
         {
             if (!ValidadorCalculadoraMoedaEstrangeira.ConsultaTaxaPorClienteIsValid(clienteID))
             {
-                return BadRequest("clienteID é obrigatório.");
+                throw new ArgumentException("clienteID é obrigatório.");
             }
 
             var valorTaxa = _calculadoraService.ConsultaTaxa(clienteID);
@@ -71,7 +72,7 @@ namespace CompraMoedaEstrangeiraAPI.Controllers
         {
             if (!ValidadorCalculadoraMoedaEstrangeira.ConsultaTaxaPorSegmentoIsValid(nomeSegmento))
             {
-                return BadRequest("Nome do segmento é obrigatório.");
+                throw new ArgumentException("Nome do segmento é obrigatório.");
             }
 
             var valorTaxa = _calculadoraService.ConsultaTaxaPorSegmento(nomeSegmento);
