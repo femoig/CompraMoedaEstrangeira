@@ -1,35 +1,36 @@
-﻿namespace CompraMoedaEstrangeiraAPI.Validators
+﻿using System;
+
+namespace CompraMoedaEstrangeiraAPI.Validators
 {
     public static class ValidadorCalculadoraMoedaEstrangeira
     {
-        public static bool CotacaoMoedaIsValid(string moeda, decimal valor, int clienteID)
+        public static void CotacaoMoedaValidate(string moeda, decimal valor, int clienteID)
         {
             if (string.IsNullOrEmpty(moeda) || valor == 0 || clienteID == 0)
             {
-                return false;
+                throw new ArgumentException("Os campos [moeda,valor,clienteID] são obrigatórios");
             }
 
-            return true;
+            if (!string.IsNullOrEmpty(moeda) && moeda.Length != 3)
+            {
+                throw new ArgumentException("Moeda no formato inválido. A moeda precisa ter 3 dígitos. Ex.: USD");
+            }
         }
 
-        public static bool ConsultaTaxaPorClienteIsValid(int clienteID)
+        public static void ConsultaTaxaPorClienteValidate(int clienteID)
         {
             if (clienteID == 0)
             {
-                return false;
+                throw new ArgumentException("clienteID é obrigatório");
             }
-
-            return true;
         }
 
-        public static bool ConsultaTaxaPorSegmentoIsValid(string nomeSegmento)
+        public static void ConsultaTaxaPorSegmentoValidate(string nomeSegmento)
         {
             if (string.IsNullOrEmpty(nomeSegmento))
             {
-                return false;
+                throw new ArgumentException("nomeSegmento é obrigatório");
             }
-
-            return true;
         }
     }
 }

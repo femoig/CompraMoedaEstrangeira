@@ -29,10 +29,7 @@ namespace CompraMoedaEstrangeiraAPI.Controllers
         [HttpGet]
         public ActionResult<CotacaoResponse> CotacaoMoeda(string moeda, decimal valor, int clienteID)
         {
-            if (!ValidadorCalculadoraMoedaEstrangeira.CotacaoMoedaIsValid(moeda, valor, clienteID))
-            {
-                throw new ArgumentException("Os campos [moeda,valor,clienteID] são obrigatórios");
-            }
+            ValidadorCalculadoraMoedaEstrangeira.CotacaoMoedaValidate(moeda, valor, clienteID);            
 
             var cotacao = _calculadoraService.CalculaCotacao(moeda, valor, clienteID);
             return cotacao;
@@ -46,13 +43,10 @@ namespace CompraMoedaEstrangeiraAPI.Controllers
         [Route("ConsultaTaxaPorCliente")]
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ActionResult<ConsultaTaxaResponse> ConsultaTaxaPorCliente(int clienteID)
         {
-            if (!ValidadorCalculadoraMoedaEstrangeira.ConsultaTaxaPorClienteIsValid(clienteID))
-            {
-                throw new ArgumentException("clienteID é obrigatório.");
-            }
+            ValidadorCalculadoraMoedaEstrangeira.ConsultaTaxaPorClienteValidate(clienteID);
 
             var valorTaxa = _calculadoraService.ConsultaTaxa(clienteID);
 
@@ -67,13 +61,10 @@ namespace CompraMoedaEstrangeiraAPI.Controllers
         [Route("ConsultaTaxaPorSegmento")]
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ActionResult<ConsultaTaxaResponse> ConsultaTaxaPorSegmento(string nomeSegmento)
         {
-            if (!ValidadorCalculadoraMoedaEstrangeira.ConsultaTaxaPorSegmentoIsValid(nomeSegmento))
-            {
-                throw new ArgumentException("Nome do segmento é obrigatório.");
-            }
+            ValidadorCalculadoraMoedaEstrangeira.ConsultaTaxaPorSegmentoValidate(nomeSegmento);
 
             var valorTaxa = _calculadoraService.ConsultaTaxaPorSegmento(nomeSegmento);
 
