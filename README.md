@@ -8,7 +8,7 @@
 * [Onde encontro a documentação e como testo?](#documentação)
 * [Autenticação](#autenticação)
 * [Arquitetura básica](#arquitetura-básica)
-* [About Me - Links](#about-me)
+* [About Me](#about-me)
  
 
 ## O que essa API faz?
