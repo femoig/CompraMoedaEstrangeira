@@ -19,7 +19,7 @@ os diversos tipos de clientes existentes, aplicando suas respectivas taxas.
 Microsoft Asp.Net Core 3.1
 
 ## Como baixar o projeto?
-Microsoft Asp.Net Core 3.1
+Faça um gitclone na url (git@github.com:femoig/CompraMoedaEstrangeira.git)
 
 ## Onde encontro a documentação e como testo?
 Foi criada uma página Swagger onde possível ter acesso a documentação bem como realizar testes. Basta utilizar o endereço (https://localhost:44303/index.html).
