@@ -36,7 +36,7 @@ namespace CompraMoedaEstrangeiraAPI.Controllers
         /// <param name="segmento">Tipo do segmento. Ex.: Private, Personnalite, Varejo</param>
         /// <param name="valorTaxa">Novo valor da taxa</param>
         [Route("AtualizaTaxaSegmento")]
-        [HttpGet]
+        [HttpPut]
         public ActionResult<SegmentoResponse> AtualizaTaxaSegmento(string segmento, decimal valorTaxa)
         {
             return _segmentoClienteService.AtualizarTaxa(segmento, valorTaxa);
